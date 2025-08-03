@@ -1,0 +1,3 @@
+we can able to display the text in the browser. no need to any tags , tags add the extra markups to the text that we are going to do 
+2) if we give the h0 or other than in range of 1 to 6 then that heading tag is treated as para
+i.e. <h1100> == <p>
