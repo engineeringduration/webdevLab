@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/validation.js" defer></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-logo">
+         
+            <span class="site-title">Online Bookstore</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="registration.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+    
+    <div class="centered-form-container">
+        <div class="centered-heading"><h2>Register</h2></div>
+        <form class="form reg-form" id="regForm" novalidate>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <span class="error" id="firstNameError"></span><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <span class="error" id="lastNameError"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error" id="passwordError"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="emailError"></span><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required>
+        <span class="error" id="mobileError"></span><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea>
+        <span class="error" id="addressError"></span><br>
+
+        <button type="submit">Register</button>
+    </form>
+    </div>
+</main>
+</html>
