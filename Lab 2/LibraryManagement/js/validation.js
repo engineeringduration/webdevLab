@@ -64,6 +64,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (!valid) {
             e.preventDefault();
+            return;
         }
+
+        // Registration logic: store user in localStorage (simulate DB)
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        const regEmail = document.getElementById('email').value.trim();
+        // Check for duplicate email
+        if (users.some(u => u.email === regEmail)) {
+            document.getElementById('emailError').textContent = 'Email already registered.';
+            e.preventDefault();
+            return;
+        }
+        // Save user
+        users.push({
+            firstName: document.getElementById('firstName').value.trim(),
+            lastName: document.getElementById('lastName').value.trim(),
+            password: document.getElementById('password').value,
+            email: regEmail,
+            mobile: document.getElementById('mobile').value.trim(),
+            address: document.getElementById('address').value.trim()
+        });
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Registration successful! Please login.');
+        window.location.href = 'login.html';
+        e.preventDefault();
     });
 });

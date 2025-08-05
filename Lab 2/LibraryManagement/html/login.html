@@ -24,13 +24,13 @@
     
     <div class="centered-form-container">
         <div class="centered-heading"><h2>Login</h2></div>
-        <form class="form login-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-        <button type="submit">Login</button>
-    </form>
+        <form class="form login-form" id="loginForm" action="#" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="input-username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="input-password" required><br>
+            <button type="submit" id="loginBtn" class="btn-login">Login</button>
+        </form>
     </div>
 </main>
 </html>
