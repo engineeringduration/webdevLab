@@ -35,9 +35,4 @@ for(let value in data){
     
 }
 
-
-
-
-
-
 // This code defines a data object with properties and a method to return the full name.
