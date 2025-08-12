@@ -1,0 +1,60 @@
+//Function OverLoading in java
+
+function sum(a){
+    console.log("In ufnc 1")
+    return a;
+}
+function sum(a,b){
+    console.log("In ufnc 2")
+    return a+b;
+}
+function sum(a,b,c){ //(a,b,c ) are arguments here
+    console.log("In ufnc 3")
+    return a+b+c;
+}
+
+let sumResult = sum(1,2,3) //(a,b,c )are parameters here
+
+//in js the last defined or written function will always execute the first
+//no matter what kind of input argument you passed it will always executes the last function
+//in java when we have a function as sum(a,b) then java will go for searching with same argument type function 
+//and will execute that funtion
+//not same in javaScript
+console.log(sumResult);
+
+
+//3. Correct Way to Simulate Overloading
+// If you want “multiple signatures” in JavaScript, you need to use argument length checks or rest parameters:
+
+// javascript
+// Copy
+// Edit
+// function sum(...args) {
+//     alert(`In sum with ${args.length} args`);
+//     return args.reduce((total, val) => total + val, 0);
+// }
+// This:
+
+// Works for any number of parameters.
+
+// Doesn’t silently overwrite functions.
+
+// Avoids NaN issues from undefined unless you pass non-numbers.
+
+
+//Mthod Overriding 
+class A{
+    disp(){
+        console.log("I am in A")
+    }
+}
+
+class B extends A{
+    disp(){
+        super.disp();
+        console.log("I am in B")
+    }
+}
+
+var op = new B();
+op.disp();
