@@ -1,0 +1,7 @@
+Promises for multiple calls and for big data
+Callback for single API calll or less 
+
+Types of function:
+Arrow , Normal function
+Generator function: to check the mid from api calls that the api is reponsding or not
+Annonu=ymous functiokn
